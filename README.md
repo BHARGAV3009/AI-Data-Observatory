@@ -2,60 +2,116 @@
 
 > **An Intelligent Platform for Enterprise Data Observability, Analytics, and Decision Intelligence**
 
-AI Data Observatory (AIDO) is a project focused on building an intelligent platform for monitoring, analyzing, and understanding enterprise data.
+AI Data Observatory (AIDO) is a personal portfolio project focused on building an intelligent platform for monitoring, analyzing, and understanding enterprise data.
 
 The long-term goal is to combine **Data Engineering, Data Science, Machine Learning, Artificial Intelligence, and MLOps** into a unified platform.
 
-> 🚧 **Project Status: Phase 1 — Foundation**
+> 🚧 **Project Status: Phase 2 — Dashboard Foundation Completed**
 
 ---
 
-## 📌 Phase 1 Overview
+## 📌 Phase 1 — Foundation
 
-Phase 1 focuses on establishing the frontend application foundation, navigation architecture, authentication flow, and reusable UI structure.
+Phase 1 established the core frontend application foundation, navigation architecture, authentication flow, protected routes, and reusable UI structure.
 
-The advanced data engineering and AI functionality will be developed in later phases.
+### ✅ Application Foundation
+
+- React + Vite project setup
+- Component-based architecture
+- Reusable UI components
+- React Router configuration
+- Centralized route constants
+
+### 🔐 Authentication
+
+- Login page
+- Authentication Context
+- Protected routes
+- Authentication state handling
+- Redirect to login for unauthenticated users
+- Mock authentication flow
+
+> **Note:** Authentication is currently mock-based. Real backend authentication and token validation will be implemented in a future phase.
+
+### 🧩 Application Layout
+
+- Responsive sidebar
+- Navigation structure
+- Page container
+- Protected application layout
+- Dashboard foundation
+
+### 📄 Application Pages
+
+- Intro / Landing Page
+- Login Page
+- Dashboard
+- Upload Data placeholder
+- Data Quality placeholder
+- Analytics placeholder
+- Forecasting placeholder
+- AI Insights placeholder
+- Reports placeholder
+- Settings placeholder
 
 ---
 
-## ✅ Currently Implemented
+## 🚀 Phase 2 — Dashboard Foundation
 
-### Application Foundation
+Phase 2 transforms the initial dashboard structure into a professional enterprise data observability dashboard.
 
-* React + Vite project setup
-* Organized component-based architecture
-* Reusable UI components
-* React Router configuration
-* Centralized route constants
+The dashboard currently uses **mock data** to demonstrate how enterprise datasets, data-quality metrics, system activity, and platform actions will be presented.
 
-### Authentication
+### ✅ Implemented
 
-* Login page
-* Authentication context structure
-* Protected routes
-* Authentication state handling
-* Redirect to login for unauthenticated users
+- KPI summary cards
+- Data quality overview
+- Dataset overview table
+- Recent activity monitoring
+- Quick actions
+- Componentized dashboard architecture
+- Mock data integration
+- Responsive dashboard foundation
+- Preparation for future API integration
 
-### Application Layout
+### 📊 Dashboard Sections
 
-* Responsive sidebar
-* Navigation structure
-* Page container
-* Protected application layout
-* Dashboard placeholder
+The dashboard currently includes:
 
-### Initial Pages
+- **KPI Summary**
+  - Total Datasets
+  - Data Quality Score
+  - Active Data Sources
+  - Data Issues
 
-* Intro / Landing Page
-* Login Page
-* Dashboard
-* Upload Data placeholder
-* Data Quality placeholder
-* Analytics placeholder
-* Forecasting placeholder
-* AI Insights placeholder
-* Reports placeholder
-* Settings placeholder
+- **Data Quality Overview**
+  - Overall Quality
+  - Completeness
+  - Accuracy
+  - Consistency
+  - Validity
+
+- **Dataset Overview**
+  - Dataset name
+  - Data source
+  - Number of records
+  - Quality score
+  - Last updated
+  - Status
+
+- **Recent Activity**
+  - Dataset uploads
+  - Data-quality checks
+  - Data-quality issues
+  - Dataset updates
+  - Report generation
+
+- **Quick Actions**
+  - Upload Data
+  - Analytics
+  - Reports
+
+> **Note:** Dashboard metrics and dataset information are currently demonstration data and are not connected to a backend yet.
 
 ---
 
@@ -63,30 +119,28 @@ The advanced data engineering and AI functionality will be developed in later ph
 
 ```text
 AI-Data-Observatory/
-│
+
 ├── client/
 │   ├── public/
 │   │
 │   └── src/
 │       ├── assets/
+│       │
 │       ├── components/
 │       │   ├── common/
-│       │   └── layout/
+│       │   ├── layout/
+│       │   └── dashboard/
+│       │       ├── mockData.js
+│       │       ├── KPICard.jsx
+│       │       ├── KPIGrid.jsx
+│       │       ├── QualityOverview.jsx
+│       │       ├── DatasetTable.jsx
+│       │       ├── RecentActivity.jsx
+│       │       └── QuickActions.jsx
 │       │
 │       ├── context/
 │       ├── hooks/
 │       ├── pages/
-│       │   ├── Intro/
-│       │   ├── Login/
-│       │   ├── Dashboard/
-│       │   ├── UploadData/
-│       │   ├── DataQuality/
-│       │   ├── Analytics/
-│       │   ├── Forecasting/
-│       │   ├── AIInsights/
-│       │   ├── Reports/
-│       │   └── Settings/
-│       │
 │       ├── routes/
 │       ├── services/
 │       ├── api/
@@ -133,7 +187,7 @@ User
 Login
  │
  ▼
-Authentication State
+Authentication Context
  │
  ├── Not Authenticated
  │        │
@@ -143,7 +197,7 @@ Authentication State
  └── Authenticated
           │
           ▼
-      Protected Routes
+    Protected Routes
           │
           ▼
        Dashboard
@@ -157,7 +211,7 @@ Authentication State
 | --------------- | ------------ | -------------- |
 | `/`             | Intro        | ✅ Implemented  |
 | `/login`        | Login        | ✅ Implemented  |
-| `/dashboard`    | Dashboard    | ✅ Foundation   |
+| `/dashboard`    | Dashboard    | ✅ Dashboard Foundation   |
 | `/upload`       | Upload Data  | 🚧 Placeholder |
 | `/data-quality` | Data Quality | 🚧 Placeholder |
 | `/analytics`    | Analytics    | 🚧 Placeholder |
@@ -177,11 +231,13 @@ Planned modules include:
 ```text
 Data Sources
      ↓
-Data Upload
+Data Ingestion
      ↓
 Data Validation
      ↓
 Data Quality Monitoring
+     ↓
+Data Processing
      ↓
 Analytics
      ↓
@@ -191,10 +247,12 @@ Forecasting
      ↓
 AI Insights
      ↓
-Decision Recommendations
+Decision Support
+     ↓
+MLOps & Monitoring
 ```
 
-These features are **planned and are not yet implemented in Phase 1**.
+These capabilities are planned for future phases and are not yet fully implemented.
 
 ---
 
@@ -208,12 +266,14 @@ This project is also being developed as a practical learning experience covering
 * Python
 * SQL
 * Data Processing
+* Statistics
+* Data Visualization 
 * Machine Learning
-* Data Visualization
+* Artificial Intelligence
 * AI Engineering
 * MLOps
 
-The implementation of these areas will be added progressively as development continues.
+Each technology will be integrated progressively as the corresponding project phase is developed.
 
 ---
 
@@ -226,31 +286,41 @@ The implementation of these areas will be added progressively as development con
 * [x] Login page
 * [x] React routing
 * [x] Protected routes
+* [x] Authentication Context
 * [x] Application layout
 * [x] Sidebar navigation
 * [x] Initial page structure
 
-### Phase 2 — Dashboard
+### Phase 2 — Dashboard Foundation
 
-* [ ] KPI cards
-* [ ] Charts
-* [ ] Alerts
-* [ ] Activity monitoring
-* [ ] Dashboard analytics
+- [x] KPI summary cards
+- [x] Data quality overview
+- [x] Dataset overview table
+- [x] Recent activity monitoring
+- [x] Quick actions
+- [x] Componentized dashboard architecture
+- [x] Mock data integration
+- [x] Responsive dashboard foundation
+- [x] Preparation for future API integration
 
 ### Phase 3 — Data Engineering
 
+* [ ] Backend API
+* [ ] Database integration
 * [ ] CSV upload
 * [ ] Excel upload
 * [ ] Dataset preview
+* [ ] Data ingestion
 * [ ] Data preprocessing
 * [ ] Data validation
-* [ ] Data quality metrics
+* [ ] Real data-quality calculations
 
 ### Phase 4 — Machine Learning
 
+* [ ] Exploratory data analysis
 * [ ] Anomaly detection
 * [ ] Forecasting
+* [ ] Model training
 * [ ] Model evaluation
 * [ ] Model management
 
@@ -258,24 +328,32 @@ The implementation of these areas will be added progressively as development con
 
 * [ ] Automated insights
 * [ ] Explainable recommendations
+* [ ] Natural-language data queries
 * [ ] Decision support
+* [ ] AI-assisted reporting
 
 ### Phase 6 — MLOps
 
 * [ ] Model tracking
 * [ ] Model versioning
-* [ ] Monitoring
+* [ ] Model monitoring
+* [ ] Model deployment
+* [ ] Containerization
 * [ ] Deployment automation
 
 ---
 
 ## 📈 Current Status
 
-**Phase 1 completed.**
+**Phase 1 — Foundation:** ✅ Completed
 
-The project currently provides the foundation required to build the remaining AIDO modules.
+**Phase 2 — Dashboard Foundation:** ✅ Completed
 
-Development will continue incrementally, with each phase adding a functional part of the platform.
+**Phase 3 — Data Engineering:** 🚧 Planned
+
+The project currently provides the frontend foundation and dashboard required for building the remaining AIDO modules.
+
+Development will continue incrementally, with each phase adding a functional part of the AIDO platform.
 
 ---
 
