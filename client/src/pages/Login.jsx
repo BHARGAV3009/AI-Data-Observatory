@@ -5,6 +5,7 @@ import { ROUTES } from '../constants/routes';
 import Button from '../components/common/Button';
 import Input from '../components/common/Input';
 import Card from '../components/common/Card';
+import application_icon from "../assets/application_icon.png";
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -51,9 +52,16 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-[var(--color-background)] flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
-        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-[var(--color-primary)] rounded-xl mx-auto mb-4 flex items-center justify-center shadow-lg cursor-pointer" onClick={() => navigate(ROUTES.HOME)}>
-          <span className="text-3xl font-bold text-white">A</span>
-        </div>
+        <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center shadow-lg overflow-hidden">
+                      <img
+                        src={application_icon}
+                        alt="App Icon"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <span className="font-semibold text-lg tracking-wide">AIDO</span>
+                  </div>
         <h2 className="text-center text-3xl font-extrabold text-[var(--color-text-main)]">
           Sign in to your account
         </h2>
